@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example of combinator CSS Selector</title>
+	<style>
+		/** Combinator CSS Descendant Selector **/
+		div ul
+		{
+			background-color: lightblue;
+			color: red;
+		}
+		/** Combinator CSS Child Selector **/
+		div > h3
+		{
+			text-align: center;
+			font: bold 15px "Courier";
+			small-caps;
+		}
+
+		/** Combinator CSS Adjacent Sibling Selector **/
+		div + p
+		{
+			text-align: right;
+			background-color: lightcoral;
+		}
+
+		/** Combinator CSS General Sibling Selector **/
+		div ~ h5
+		{
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<h3>List of Student Names</h3>
+		<ul>
+			<li>Haritha</li>
+			<li>Rehana</li>
+			<li>Kavya</li>
+		</ul>
+	</div>
+	<p>This is a First paragraph after the first division section</p>
+
+	<p>This is a second paragraph after first paragraph</p>
+
+	<h5>This is heading 5 after first div</h5>
+
+
+	<div>
+		<h3>List of Marks</h3>
+		<ol>
+			<li>97</li>
+			<li>77</li>
+			<li>86</li>
+		</ol>
+	</div>
+
+	<p>This is a third paragraph after second div element</p>
+
+
+
+</body>
+</html>

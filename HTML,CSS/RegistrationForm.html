@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example for HTML FORMS</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--Controls:Forms contain special elements called controls loke inputbox,checkbox,radio-buttons,submit buttons-->
+	<style>
+		div.input-icons i
+		{
+            position: absolute;
+		}
+		.input-icon
+		{
+			width: 100%;
+		}
+		.icon
+		{
+			padding: 15px;
+		}
+	</style>
+
+	<style>
+		td{
+			padding: 15px 10px;
+			border-spacing: 10px 10px;
+		}
+		textarea,select,input[type=text],input[type=email]{
+			width: auto;
+			padding: 8px 30px;
+			margin: 8px 0px ;
+			border-radius: 10px;
+			border: 2px solid purple;
+		}
+		label{
+			font-family: Tahoma;
+			font-weight: 14px;
+			text-align: center;
+			font-size: 15px;
+			border-radius: 10px;
+			color: #8B1C62 ;
+		}
+	</style>
+	<!--single value for padding->applies to all sides-->
+</head>
+<
+<body bgcolor="lightyellow">
+<img src="CSE_Header.png" alt="No Image Found" width="100%"></img>
+<form action="Feedback.html" target="_blank" name="RegistratioForm" autocomplete="off" method="GET">
+
+<fieldset width="60%"> <legend align="center"><h3>Student Registration Form</h3></legend>
+<!--Fieldset tag to set border to the form-->
+<!--
+*1."name" attribute: is to differentiate one form with the other
+*2."action" attribute: defines the action to be performed when the form is submitted,,here we move to Feedback.html,,in general it moves to server side program
+3."target" attribute: specifies where to display the response that is received after submitting.It can have values-> _self,_blank,etc
+4."autocomplete" attribute: whether a form should have autofill on or off
+**5."method" attribute: specifies the HTTP method to be used when submitting the form,,can have values GET(form data is sent as URL variables i.e.,appended to the url and sent to targeted page,,here data is not secure,,length of url is limited 2048chars,,useful for bookmarking the results,,Ex:Google,results,,it is idempotent,amamzon),POST(Appends form data inside the body of HTTP request,i.e,data is stored into an object which has a ref name which is appended to url,,no size limitations,,forms sub using post cant be bookmarked,,non idmepotent,youtube)
+**Use of get,post is to submit data to webserver-->
+<!--<input> element/tag:can be displayed in many types based on attributes-->
+<!--we use table to organise the form-->
+<table align="center">
+	<tr>
+		<td><label for="name">Name:</label></td>
+		<td>
+			<div class="input-icons"><i class="fa fa-user icon"></i><!--i tag to add icon-->
+			<input type="text" id="name" name="nameofstudent" value="Guest" maxlength="25" required>
+		</td>
+	</tr><!--"input" tag:Single line text input,,name to differentiate data bwn various text fields,,required is to specify as mandatory field-->
+
+	<tr>
+		<td><label>Enter your Address</label></td>
+		<td><!--"textarea" tag:insert multiple line text in a form-->
+			<textarea rows="6" cols="25"></textarea>
+		</td>
+	</tr>
+	<!--"label" tag:it makes the code userfriendly,,"for" attribute contains id of that label tag,,which is required to link to its corresponding input tag using "id" attribute such that when we click on the name our text box should be activated-->
+	<!--for and id should have same values,,value of name can be same as id-->
+
+	<tr>
+		<td><label for="email">Email ID:</label></td>
+		<td>
+			<input type="email" id="email" name="emailofstudent" value="example@vrsec.ac.in" maxlength="30" required></input><!--if type value is email,,it evaluates the email implicitly-->
+		</td>
+	</tr>
+
+	<tr>
+		<td><label for="pwd">Password:</label></td>
+		<td>
+			<div class="input-icons"><i class="fa fa-key icon"></i><!--Type value is password,,used to mask the pwd-->
+			<input type="Password" id="pwd" name="password" maxlength="10" required></input>
+		</td>
+	</tr>
+
+	<tr>
+		<td><label for="lang">Languages Known:</label></td>
+		<td>
+			<input type="checkbox" id="lang" name="lang" required><b>English</b> </input>
+			<input type="checkbox" id="lang" name="lang"><b>Telugu</b> </input>
+			<input type="checkbox" id="lang" name="lang" disabled><b>Hindi</b> </input>
+			<input type="checkbox" id="lang" name="lang"><b>French</b> </input>
+		</td><!--disabled attribute is used to disable an option to the user-->
+	</tr>
+
+	<tr>
+		<td><label for="gender">Gender:</label></td>
+		<td>
+			<input type="radio" id="gender" name="g" required><b>Male</b></input>
+		<input type="radio" id="gender" checked name="g" required><b>Female</b></input></td><!--checked is a standalone attribute,, used to preselect a value by default--> 
+	</tr>
+
+	<tr>
+		<td><label for="age">Age(In between 16 and 18):</label></td>
+		<td>
+			<input type="number" id="age" name="age" min="16" max="18" value="16" required></input>
+		</td>
+	</tr>
+
+	<tr>
+		<td><label for="color">Your Fav Color:</label></td>
+		<td>
+			<input type="color" id="color" name="color" required></input>
+		</td>
+	</tr>
+
+	<tr>
+		<td><label for="dob">Date of Birth:</label></td>
+		<td>
+			<input type="datetime-local" id="dob" name="dob" max="2022-05-22" min="1995-05-22" required></input>
+		</td>
+	</tr>
+
+	<tr>
+		<td><label for="week">Week:</label></td>
+		<td>
+			<input type="week" id="week" name="week" required></input>
+		</td>
+	</tr>
+
+	<tr>
+		<td><label for="time">Time:</label></td>
+		<td>
+			<input type="time" id="time" name="mytime" required></input>
+		</td>
+	</tr>
+
+	<tr>
+		<td><label for="rating">Proficiency in English:</label></td>
+		<td>
+			<input type="range" id="rating" name="rate" min="0" max="10" step="1"></input>
+		</td>
+	</tr>
+
+	<tr>
+		<td><label for="photo">Upload your photo::</label></td>
+		<td>
+			<input type="file" id="photo" name="urphoto"></input>
+		</td>
+	</tr>
+
+	<tr>
+		<td><label for="urladdress">Your blog address:</label></td>
+		<td>
+			<input type="url" id="urladdress" name="urladdress"></input>
+		</td>
+	</tr>
+
+	<tr>
+		<td><label for="mobn">Your Mobile Number:</label></td>
+		<td>
+			<input type="tel" id="mobn" name="mobn" value="+919999999999" pattern="[6-9]{1}[0-9]{9}"></input>
+		</td><!--pattern attribute [6-9]{1}the first digit in btwn 6 to 9,,the other 9 digits btwn 0 to 9--> 
+	</tr>
+
+	<!--select tag-->
+
+	<tr>
+		<td><label for="state">Your State:</label></td>
+		<td>
+			<select id="state" name="states" size="3" multiple>
+				<option value="Andhra Pradesh">Andhra Pradesh</option>
+
+				<option value="Bihar">Bihar</option>
+			
+				<option value="Chattisgarh">Chattisgarh</option>
+			
+				<option value="Delhi" selected>Delhi</option>
+			
+				<option value="Telangana">Telangana</option>
+			</select>
+		</td><!--size attribute decides how many values can be seen at a glance,,multiple attribute helps to select more than one option-->
+	</tr>
+
+	<tr>
+		<td><label for="Branch">Select Branch:</label></td>
+		<td>
+			<input list="branch">
+			<datalist id="Branch">
+			<option value="CSE">
+			<option value="ECE">
+			<option value="IT">
+		</datalist></td><!--a hint to user regarding that field-->
+	</tr>
+
+
+
+
+	<!--<tr>
+		<td colspan="2" align="center">
+			<input type="submit" value="Register"></input>  
+		</td>
+	</tr>-->
+
+	<!--<tr>
+		<td colspan="2" align="center">
+			<input type="image" src="button.jpg" alt="Submit" style="float:center" width="120" height="40"></input>  
+		</td>
+	</tr>-->
+	<tr>
+		<td colspan="2" align="center">
+			<button type="button" onclick="alert('Form submitted successfully')">Submit</button>
+		</td><!--onclick is a javascript code,which calls alert-> a builtin method in javascript which displays str in single quotes-->
+	</tr>
+
+
+</table>
+</fieldset>	
+</form>
+</body>
+</html>

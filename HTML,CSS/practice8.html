@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML links(Anchor tags)</title>
+</head>
+<body alink="red" vlink="purple">   <!--all active links in red and visited links in purple-->
+	<h1 id="t">Main</h1>
+	<a>Click Here!!</a><br> 
+	<!--without attributes there will be no functinality for an anchor tag,,href is the attribute that should be used always.
+		Syntax: <a href="Link">Msg to be displayed</a>
+		The value assigned to href may be absolute url or relative url,,absolute url->from one website to other,,relative url->in the same website-->
+	<a href="http://www.google.com/">Click Here to visit google</a><!--This is absolute url--><br>
+	<a href="practice4.html">Visit your another local webpage</a><!--This is relative url--><br>
+	<a href="file:///C:/Users/R.LOHITHA/OneDrive/Desktop/Computer-Networks-5th-Edition.pdf">Open pdf</a><br>
+	<!--relative url starts with / , ../-->
+	<a href="mailto:lohitharepalle@gmail.com">Send a mail to me</a><br>
+	<a href="tel:+919392336609">Call Me</a>
+	<img src="bg.jpg"></img>
+	<a href="#t">Move to top</a>
+	<!--Scroll to top by assigning an id to the line where u wish to scroll and give #id to href-->
+	<hr>
+	<a href="http://www.google.com/" target="_self" title="This link is to visit google home page">Visit google</a><!--opens in the same window of the same browser--><br><!--title attribute adds-->
+	<a href="http://www.google.com/" target="_blank">Visit google</a> <!--opens in a new window of the same browser--><br>
+	<a href="file:///C:/Users/R.LOHITHA/OneDrive/Desktop/Computer-Networks-5th-Edition.pdf" download="pdf">Download</a><br><!--value of download will be the downloaded file name-->
+
+	<!--Using a button as link but wee dont use anchor tag in this case-->
+	<button onclick="document.location='practice4.html'">HTML</button>
+	
+	
+</body>
+</html>

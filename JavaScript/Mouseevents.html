@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Mouse events</title>
+	<!--onmousedown,onmouseup-->
+</head>
+<body>
+	<script>
+		function mousedownevent()
+		{
+			alert("On Mouse Down Event fired");
+		}
+		function mouseupevent()
+		{
+			document.getElementById("up").style.color="red"
+		}
+		function mouseoverevent()
+		{
+			document.getElementById("over").style.backgroundColor="pink"
+		}
+		function mouseoutevent()
+		{
+			document.getElementById("out").style.backgroundColor="white"
+		}
+	</script>
+	<p onmousedown="mousedownevent()">Move the cursor down</p><!--occurs on pressing a mouse button over an element-->
+
+	<p onmouseup="mouseupevent()" id="up">Release the  mouse button</p><!--occurs on releasing the mouse click-->
+
+	<p onmouseover="mouseoverevent()" id="over">Mouse over event</p><!--occurs when mouse pointer is moved onto an element-->
+
+	<p onmouseout="mouseoutevent()" id="out" style="background: palevioletred;">Mouse out event</p><!--occurs when mouse pointer is moved out of an element-->
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Third Example of JavaScript</title>
+	<style>
+		button
+		{
+
+			background-color: lightgreen;
+			border-radius: 10px;
+			border: 2px solid red;
+			padding: 5px;
+
+		}
+
+	</style>
+	<script>
+		function callme()
+		{
+			/**to access html element of body into js**/
+
+			document.getElementById("demo").innerHTML="Paragraph Changed";
+			/**document->object,getElementById->method,innerHTML->Property**/
+            
+		}
+
+	</script>
+</head>
+<body>
+
+	<h2>This is Third Demo of Java Script</h2>
+	<h4>One way of inserting JS into HTML document to create Dynamic Web page</h4>
+
+	<p id="demo">This is paragraph</p>
+	<button type="button" onclick="callme()">Try Me</button>
+
+</body>
+</html>

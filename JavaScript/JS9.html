@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function callMe()
+		{
+			document.getElementById("o1").style.backgroundColor="lightblue";
+		}
+		function caalyou()
+		{
+			document.getElementById("i1").style.backgroundColor="pink";
+		}
+	</script>
+</head>
+<body id="o1" onkeydown="callMe()">
+
+	<form method="get">
+		Name:<input type="text" id="i1" onkeyup="caalyou()" name="fname" required>
+		<input type="submit" value="submit">
+	</form>
+
+</body>
+</html>

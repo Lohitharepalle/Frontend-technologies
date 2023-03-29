@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function callMe()
+		{
+			document.getElementById("i1").style.background="yellow";
+		}
+	</script>
+</head>
+<body>
+
+	<form method="get">
+		Name:<input type="text" id="i1" onblur="callMe()" name="fname" required><!--click on someother place outside text box--> 
+		<input type="submit" value="submit">
+	</form>
+
+</body>
+</html>

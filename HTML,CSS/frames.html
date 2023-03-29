@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Example for Frames in HTML</title>
+		<!--A browser window is partioned into frames,,set of frames is called a frameset--><!--use frameset tag instead of body tag--><!--we can display the output of multiple webpages at a time-->
+
+</head>
+<frameset rows="23%,67%,10%" border="0" >
+	<frame src="banner.html" noresize></frame>
+
+	<frameset cols="8%,*,20%">
+	<frame src="menus.html" marginheight="" scrolling="no" noresize></frame>
+	<frame src="contents.html" name="center" scrolling="no" noresize></frame>
+	<frame src="announcements.html" scrolling="no" noresize></frame>
+</frameset>
+
+<frame src="events.html" scrolling="no" noresize></frame>
+</frameset>
+</html>
+
+<!--name attribute is used togive names to frame aand also to indicate which frame a document should be loaded in,,-->

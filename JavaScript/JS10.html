@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function callMe()
+		{
+			alert("You paused the video");
+		}
+		function callyou()
+		{
+			alert("You played the video");
+		}
+	</script>
+</head>
+<body>
+
+	<audio src="audio.mp3"></audio>
+	<video src="C:\Users\R.LOHITHA\Videos\video.mkv" height="400" width="500" controls onpause="callMe()" onplay="callyou()" onvolumechange="callme()"></video>
+
+</body>
+</html>

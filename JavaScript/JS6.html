@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function callMe()
+		{
+			var x=document.getElementById("i1").value;
+			document.getElementById("o1").innerHTML=x.toUpperCase(); /*innerHTML to modify text*/
+		}
+	</script>
+</head>
+<body>
+
+	<p>Write something in the text field to trigger a function</p>
+
+	<input type="text" id="i1" oninput="callMe()">
+	<p id="o1"></p> 
+</body>
+</html>

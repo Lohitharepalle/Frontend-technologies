@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example for CSS Attribute Selector</title>
+	<!--2.Internal/Embedded CSS-->
+	<style>
+
+		<link rel="stylesheet";href="Second.css">
+
+		/**Import CSS**/
+
+		@import url(First.css);
+		
+
+		/**CSS Attribute Selector**/
+
+		input[type]
+		{
+			width: auto;
+			padding: 8px 30px;
+			margin: 8px 0px;
+			border-radius: 10px;
+			border: 2px solid green;
+
+		}
+
+		input[type="email"]
+		{
+			width: auto;
+			padding: 8px 30px;
+			margin: 8px 0px;
+			border-radius: 10px;
+			border: 2px solid red;
+			color: red;
+
+		}
+
+		a[href]
+		{
+			color: purple;
+		}
+    
+    [title~="cherry"] /**title**/
+    {
+    	color: darkcyan;
+    }
+
+    h4[title|="fruit"]  /**either or**/
+    {
+    	color: pink;
+    }
+
+    h4[title^="ch"] /**Starts with**/
+    {
+    	color: pink;
+    }
+
+    h4[title$="it"]  /**Ends with**/
+    {
+    	color: blue;
+    }
+
+    h3[title*="rr"] /**substring**/
+    {
+    	background-color: pink;
+    }
+
+    input:required
+    {
+    	color: hotpink;
+    }
+
+    input:optional
+    {
+    	color: chocolate;
+    }
+
+    div::selection
+    {
+    	background-color: yellow;
+    }
+
+	</style>
+</head>
+<body>
+
+	<form>
+
+		<input type="Password" id="pwd" name="password" maxlength="10" optional></input>
+
+		<input type="text" id="name" name="nameofstudent" value="Guest" maxlength="25"></input>
+
+		<input type="email" id="email" name="emailofstudent" value="example@vrsec.ac.in" maxlength="30" required></input>
+
+	</form>
+	<a style="color:greenyellow; font: 15px Courier;" href="https://www.google.com" target="_blank">Google.com</a><!--1.Inline CSS-->
+
+	<h3 title="cherry">Cherry is a fruit</h3>
+
+	<h4 title="cherry-fruit">Cherry is sweet</h4>
+
+	<div>This is some text in a division element</div>
+
+	<h1>Heading Level 1</h1>
+
+	<h2>Heading Level 2</h2>
+</body>
+</html>

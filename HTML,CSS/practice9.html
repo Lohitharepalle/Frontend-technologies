@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Tables</title><!--Table header(thead);Table body->table row(tr),table data(td);Table footer ->no visual difference-->
+	<style>
+		thead
+		{
+			background-color:  pink;
+			text-align:  center;
+		}
+		tfoot
+		{
+			background-color: purple;
+		}
+		tbody
+		{
+			background-color: lightgreen;
+		}
+		table,tr,td,th
+		{
+			border:  2px solid;
+			border-collapse: collapse;
+			border-radius: 5px; 
+		}
+		th,td{
+			padding-right:  50px;
+			padding-top: 10px;
+			padding-left: 15px;
+
+		}
+		table{
+			border-spacing: 100px;
+		}
+
+	</style>
+
+</head>
+<body>             <!--cell padding is space between cell borders and cell content-->
+	<table align="center" border='1' cellspacing="10"> <!--border default value=0-->
+		<caption>Details</caption>
+		<colgroup>
+			<col span="2" style="background-color: lightgreen;">
+			<col style="background-color: lightcyan;">
+		</colgroup>
+		<thead>
+		<tr><th style="width: 70%">Employee Name</th><th>Employee salary</th><th>Employee id</th></tr>
+	    </thead>
+		<tbody>
+		<tr><td>Lohitha</td><td>200000</td><td>B1</td></tr>
+		<tr><td>Himaja</td><td>200000</td><td>C8</td></tr>
+		<tr><td>Uday</td><td>200000</td><td>A0</td></tr>
+		<tr><td colspan="3"><ul>Hobbies:<li>Talking</li><li>listening music</li><li>playing</li></ul></td></tr>
+		<tr><td colspan="3"><img src="bg.jpg" alt="Image not found" width="100" height="100"></td></tr>
+		</tbody>
+		<tfoot>
+			<tr><td>Total employees:4</td><td colspan="2">avg salary=1lakh</td></tr>
+		</tfoot>
+		<!-- caption tag: must be inserted immediatedly after table tag,,by default caption is center aligned-->
+		<!-- colgroup tag: applying styles to entire column,,placed after caption tag and before thead tag--> 
+		<!-- thead tag: is used to group header content in html table-->
+	</table>
+
+
+
+</body>
+</html>
+
+
+
+
+<!--
+	Home task 2
+title-super market
+	caption-sale invoice
+	headings-s.no,product name,product id,product cost per item,product image,product highlights
+	body-
+	footer-total cost ,cost(bold) as 1 data cell(different font,size)
+	Home task 3
+	resume as table-->

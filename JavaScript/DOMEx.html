@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM</title>
+</head>
+<body>
+	<h2>JavaScript HTML DOM Example</h2>
+	<p>Finding the HTML Elements by HTML Object Collections</p>
+	
+
+	<form id="f1">
+		Enter First Name:<input type="text" name="Name" value="lohitha"><br><br>
+		Enter Last Name:<input type="text" name="Name2" value="repalle"><br><br>
+		<input type="submit">
+	</form>
+	<p>These are the values of input controls of form</p>
+	<p id="demo"></p>
+	<script>
+		    const x=document.forms["f1"];
+		    let text="";
+		    for(let i=0;i<x.length;i++){
+			    text+=x.elements[i].value+"<br>";/*Trying to embed HTML tags into JS,,we give the tags in quotes*/ 
+		    }
+		    document.getElementById("demo").innerHTML=text;
+
+	</script>
+
+</body>
+</html>

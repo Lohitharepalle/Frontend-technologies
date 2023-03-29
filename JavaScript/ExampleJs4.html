@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		var a,i,c,temp;
+		/*Syntax of Creating a function*/
+		function checkPrime()
+    {
+    	a=parseInt(document.getElementById("one").value);
+
+    	if(a)
+        {
+        	c=0;
+        	temp=document.getElementById("result");
+        	temp.style.display="block";
+        	for(i=2;i<a/2;i++)
+        	{
+        		if(a%i==0)
+        		{
+        			c++;
+        			break;
+        		}
+        	}
+        	if(c==0)
+        	{
+        		document.write("Prime");
+        	}
+        	else
+        	{
+        		document.write("Not Prime");
+        	}
+        	
+        }
+
+    }
+	</script>
+</head>
+<body>
+	<p>Enter First Number:
+	<input id="one"></p>
+
+	<button type="button" id="result" onclick="checkPrime()">Check</button>
+
+</body>
+</html>

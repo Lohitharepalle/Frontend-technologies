@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		var a,b,res,temp,k;
+		/*Syntax of Creating a function*/
+		function calculate()
+    {
+    	one=parseInt(document.getElementById("1").value);
+        two=parseInt(document.getElementById("2").value);
+        
+        {
+        	res=one+two;
+        	document.getElementById("a").value=res;
+        	res=one-two;
+        	document.getElementById("s").value=res;
+        	res=one*two;
+        	document.getElementById("m").value=res;
+        	res=one/two;
+        	document.getElementById("d").value=res;
+        }
+        document.getElementById("result").style.display="block";
+
+    }
+	</script>
+</head>
+<body>
+	<p>Enter First Number:
+	<input id="one"></p>
+	
+	<p>Enter Second Number:
+	<input id="two"></p>
+	<br>
+	<br>
+
+	<button type="button" onclick="calculate()">Calculate</button>
+
+	<p id="result" style="display: none;"><!--display:none->displays only after certain operation-->
+		Addition:
+			<input id='a'>
+		Subtraction:
+			<input id='s'>
+		Multiplication:
+			<input id='m'>
+		Division:
+			<input id='d'>
+		</p>
+
+	<script>
+		
+	</script>
+
+</body>
+</html>

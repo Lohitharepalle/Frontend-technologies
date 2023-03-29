@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamically inserting an image into webpage using Javascript</title>
+</head>
+<body>
+	<h1>Inserting Image into Webpage using JavaScript</h1>
+	<p>Here,a javascript changes the value of (src) attribute of an image dynamically</p>
+
+	<script>
+		function changeImage(sw)
+		{
+			var pic;
+			if(sw==0)
+			{
+				pic="pic_bulboff.gif";
+			}
+			else
+			{
+				pic="pic_bulbon.gif";
+			}
+			document.getElementById("myImage").src=pic;
+
+		}
+
+		
+	</script>
+
+	<img id="myImage" src="pic_bulbon.gif" alt="No Image Found">
+	<button type="button" onclick="changeImage(0)">Light OFF</button>
+	<button type="button" onclick="changeImage(1)">Light ON</button>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First Java Script code inside HTML</title>
+	<style>
+		p
+		{
+			font-family: 'Times New Roman',sans-serif;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			border: 2px solid green;
+			text-align: center;
+			top: 20%;
+			left: 20%;
+			color: blue;
+			border-radius: 10px;
+			padding: 3px 10px;
+			display: inline-block;
+			box-shadow: 1px 1px 2px;
+			cursor: pointer;
+
+		}
+	</style>
+</head>
+<body>
+
+	<p>Player 1: Guest</p>
+	<script>
+	    const para=document.querySelector('p');
+	    /**document is an obj,queryselector() selects p**/
+
+	    para.addEventListener('click',updateName);
+
+	    /**  Define a function  **/
+	    function updateName()
+	    {
+	    	const name= prompt('Enter your name');
+            
+            para.textContent=`Player 1: ${name}`;
+	    }
+	    /** String in js can be created using "",'',``,,Particularly `` are use when we include a variable in string **/
+	    /**%d-->$**/
+	</script>
+</body>
+</html>

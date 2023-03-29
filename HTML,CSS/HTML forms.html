@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example for HTML FORMS</title>
+
+	<style>
+		td{
+			padding: 15px 10px;
+			border-spacing: 10px 10px;
+		}
+		textarea,select,input[type=text],input[type=email]{
+			width: auto;
+			padding: 8px 30px;
+			margin: 8px 0px ;
+			border-radius: 10px;
+			border: 2px solid purple;
+		}
+		label{
+			font-family: Tahoma;
+			font-weight: 14px;
+			text-align: center;
+			font-size: 15px;
+			border-radius: 10px;
+			color: #8B1C62 ;
+		}
+	</style>
+</head>
+<body bgcolor="lightyellow">
+<img src="CSE_Header.png" alt="No Image Found" width="100%"></img>
+<form action="Feedback.html" target="_blank" name="RegistratioForm" autocomplete="off" method="GET">
+
+<fieldset width="60%"> <legend align="center"><h3>Student Registration Form</h3></legend>
+
+<table align="center">
+	<tr>
+		<td><label for="name">Name:</label></td>
+ 		<td>
+			
+			<input type="text" id="name" name="nameofstudent" value="Guest" maxlength="25" required>
+		</td>
+	</tr>
+
+
+	<tr>
+		<td><label for="email">Email ID:</label></td>
+		<td>
+			<input type="email" id="email" name="emailofstudent" value="example@vrsec.ac.in" maxlength="30" required></input>
+		</td>
+	</tr>
+
+	<tr>
+		<td><label for="pwd">Password:</label></td>
+		<td>
+			<input type="Password" id="pwd" name="password" maxlength="10" required></input>
+		</td>
+	</tr>
+
+	<tr>
+		<td><label for="lang">Languages Known:</label></td>
+		<td>
+			<input type="checkbox" id="lang" name="lang" required><b>English</b> </input>
+			<input type="checkbox" id="lang" name="lang"><b>Telugu</b> </input>
+			<input type="checkbox" id="lang" name="lang" disabled><b>Hindi</b> </input>
+		</td>
+	</tr>
+
+	<tr>
+		<td><label for="gender">Gender:</label></td>
+		<td>
+			<input type="radio" id="gender" name="g" required><b>Male</b></input>
+		<input type="radio" id="gender" name="g" required><b>Female</b></input></td>
+	</tr>
+
+
+	
+	<tr>
+		<td colspan="2" align="center">
+			<button type="button" onclick="alert('Form submitted successfully')">Submit</button>
+		</td>
+	</tr>
+
+
+</table>
+</fieldset>	
+</form>
+</body>
+</html>

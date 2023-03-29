@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example for CSS Pseudo-class Selector</title>
+	<style>
+		/**CSS Pseudo-class Selector**/
+		
+		a.highlight:hover
+		{
+			color: #00ff00;
+			background-color: #0000FF;
+		}
+
+		button.highlight:hover
+		{
+			color: purple;
+			background-color: white;
+			border-radius: 8px;
+		}
+
+		/**CSS Pseudo Element Selector **/
+
+		p::first-letter
+		{
+			color: blue;
+			font: bold; 30px Georgia,serif;
+		}
+
+		p::first-line
+		{
+			color: red;
+			font: italic 20px "Courier";
+		}
+		p::after
+		{
+			content: url(https://w7.pngwing.com/pngs/342/79/png-transparent-smirk-smiley-248-link-smirk-mouth-smiley-meme-chemical-reaction-thumbnail.png);
+		}
+
+	</style>
+</head>
+<body>
+
+	<a class="highlight" href="https://www.google.com">Google</a>
+
+	<a href="https://www.twitter.com">Twitter</a>
+
+	<a class="highlight" href="https://www.instagram.com">Instagram</a>
+
+	<button class="highlight">Click Me</button>
+
+	<p>Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.</p>
+
+
+</body>
+</html>
